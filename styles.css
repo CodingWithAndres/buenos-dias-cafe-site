@@ -29,6 +29,12 @@ address {
   line-height: 1.6;
 }
 
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
 .container {
   width: min(1120px, 92%);
   margin: 0 auto;
@@ -38,9 +44,9 @@ address {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 250, 244, 0.95);
+  background: rgba(255, 250, 244, 0.85);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
 .nav {
@@ -70,6 +76,23 @@ address {
   text-decoration: none;
   color: var(--muted);
   font-weight: 600;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 
 .nav-links a:hover,
@@ -84,7 +107,7 @@ address {
   background:
     linear-gradient(rgba(245, 239, 232, 0.78), rgba(245, 239, 232, 0.88)),
     url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80")
-    center/cover no-repeat;
+      center/cover no-repeat;
 }
 
 .hero-content {
@@ -116,6 +139,15 @@ address {
   margin-bottom: 2rem;
 }
 
+.hero-text,
+.intro-grid p,
+.card p,
+.contact-card p,
+.info-box p,
+.text-block p {
+  max-width: 65ch;
+}
+
 .hero-actions {
   display: flex;
   gap: 1rem;
@@ -130,11 +162,12 @@ address {
   padding: 0.9rem 1.45rem;
   border-radius: 999px;
   font-weight: 700;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
   background: var(--accent-dark);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -181,6 +214,10 @@ address {
   border-radius: 24px;
   padding: 2rem;
   min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .day-card {
@@ -190,7 +227,7 @@ address {
 }
 
 .night-card {
-  background: var(--night);
+  background: linear-gradient(180deg, #2a1d17 0%, #1c120d 100%);
   color: #f8efe5;
   border: 1px solid #4b352c;
 }
@@ -218,18 +255,31 @@ address {
 .card,
 .info-box,
 .contact-card,
-.menu-section {
+.menu-section,
+.map-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card h3,
 .info-title,
 .contact-card h2,
-.menu-section h2 {
+.menu-section h2,
+.map-card h2 {
   margin-bottom: 0.75rem;
+}
+
+.card:hover,
+.info-box:hover,
+.contact-card:hover,
+.menu-section:hover,
+.map-card:hover,
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
 .center {
@@ -290,6 +340,25 @@ address {
   margin-top: 1.25rem;
 }
 
+.map-card p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.map-card iframe {
+  border-radius: 16px;
+  display: block;
+}
+
+.visit-section {
+  max-width: 760px;
+}
+
+.visit-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .site-footer {
   background: var(--surface);
   border-top: 1px solid var(--border);
@@ -332,6 +401,10 @@ address {
 
   .hero {
     min-height: 78vh;
+  }
+
+  .section {
+    padding: 3.5rem 0;
   }
 
   .footer-row {
