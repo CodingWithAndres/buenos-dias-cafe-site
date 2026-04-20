@@ -581,3 +581,22 @@ h3 {
     padding: 1rem 0;
   }
 }
+
+.service-status {
+  margin: 2rem auto;
+  padding: 3rem 1.5rem;
+  max-width: 700px;
+  text-align: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.service-status h2 {
+  margin-bottom: 0.75rem;
+}
+
+.service-status p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
