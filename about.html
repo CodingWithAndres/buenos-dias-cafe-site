@@ -6,57 +6,63 @@
   <title>About | Buenos Días Café x Por La Noche</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
+<script src="script.js"></script>
+
 <body>
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="logo">Buenos Días Café x Por La Noche</a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="day-menu.html">Day Menu</a></li>
-          <li><a href="night-menu.html">Night Menu</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+<nav id="nav-menu">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="day-menu.html">Day Menu</a></li>
+    <li><a href="night-menu.html">Night Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
     </div>
   </header>
 
   <main class="page-main">
-    <section class="page-hero">
-      <div class="container">
+    <!-- Hero -->
+    <section class="page-hero about">
+      <div class="container about-hero-content">
         <p class="section-label center">About</p>
-        <h1 class="center">A concept built around two moods in one place.</h1>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container text-block">
-        <p>
-          Buenos Días Café x Por La Noche is designed as a space that changes with the day.
-          In the morning and early afternoon, it focuses on coffee, breakfast, and a bright,
-          welcoming café experience.
-        </p>
-
-        <p>
-          In the evening, the restaurant reopens with a different energy. The atmosphere becomes
-          warmer and more elevated, with dinner service and a mood that feels more intimate
-          and intentional.
-        </p>
-
-        <p>
-          This website is being built not only as a class project, but as a real concept site
-          that could continue to grow alongside the business.
+        <h1 class="center">A space designed for both mornings and evenings.</h1>
+        <p class="about-intro">
+          Buenos Días Café x Por La Noche is built around the idea of one place offering
+          two distinct experiences — bright and welcoming by day, warmer and more elevated at night.
         </p>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p>© 2026 Buenos Días Café x Por La Noche</p>
-      <p>Built as a real restaurant concept site.</p>
+    <!-- Story Card -->
+<section class="section about-story-wrap">
+  <div class="container">
+    <div class="about-story-card">
+      <p class="section-label">Our approach</p>
+      <h2>The experience shifts with the day.</h2>
+
+      <p>
+        During the day, Buenos Días Café is designed to feel easy, calm, and welcoming.
+        The focus is on coffee, breakfast, pastries, and a daytime atmosphere that feels
+        simple and inviting.
+      </p>
+
+      <p>
+        In the evening, Por La Noche brings a shift in energy. The experience becomes
+        warmer, more intimate, and more dinner-focused, creating a mood that feels
+        more polished while still staying connected to the neighborhood.
+      </p>
+
+      <p>
+        The goal is to create a place people can return to throughout the day — whether
+        for a morning coffee, a casual breakfast, or an evening out.
+      </p>
     </div>
-  </footer>
-</body>
-</html>
+  </div>
+</section>
