@@ -7,23 +7,21 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<script src="script.js"></script>
-
 <body>
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="logo">Buenos Días Café x Por La Noche</a>
       <button class="menu-toggle" id="menu-toggle">☰</button>
 
-<nav id="nav-menu">
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="day-menu.html">Day Menu</a></li>
-    <li><a href="night-menu.html">Night Menu</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="day-menu.html">Day Menu</a></li>
+          <li><a href="night-menu.html">Night Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -73,20 +71,31 @@
       </div>
     </section>
 
+    <!-- ENHANCEMENT -->
     <section class="section">
-      <div class="container">
-        <div class="map-card">
-          <h2>Find Us</h2>
-          <p>614 N Belt Line Rd, Grand Prairie, TX 75050</p>
+      <div class="container visit-section">
+        <div class="visit-text">
+          <p class="section-label">Plan your visit</p>
+          <h2>Stop by for coffee or dinner</h2>
+          <p>
+            Whether you're starting your morning with coffee or joining us for dinner in the evening,
+            Buenos Días Café x Por La Noche offers two different experiences in one space.
+          </p>
 
+          <div class="visit-details">
+            <p><strong>Address:</strong> 614 N Belt Line Rd, Grand Prairie, TX 75050</p>
+            <p><strong>Day Hours:</strong> Mon–Sun, 7:00 AM – 2:00 PM</p>
+            <p><strong>Night Hours:</strong> Thu–Sun, 5:00 PM – 10:00 PM</p>
+          </div>
+        </div>
+
+        <div class="map-card">
           <iframe
             src="https://www.google.com/maps?q=614+N+Belt+Line+Rd+Grand+Prairie+TX+75050&output=embed"
             width="100%"
-            height="350"
+            height="320"
             style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            loading="lazy">
           </iframe>
         </div>
       </div>
@@ -99,5 +108,6 @@
       <p>Built as a real restaurant concept site.</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
